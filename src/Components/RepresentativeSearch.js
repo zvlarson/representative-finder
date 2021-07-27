@@ -29,7 +29,7 @@ function RepresentativeSearch() {
         onChange={(event) => setAddress(event.target.value)}
       />
       <div>
-        <button className="search-btn" onClick={() => searchRepresentatives()}>
+        <button className="submit-btn" onClick={() => searchRepresentatives()}>
           Submit
         </button>
       </div>
