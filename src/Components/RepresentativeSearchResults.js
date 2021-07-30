@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { UserContext } from "../App";
+
 function RepresentativeSearchResults(props) {
   const { offices, officials } = props;
+  const {userProfile} = useContext(UserContext)
 
   return (
     <div>
+      <h4>Here are your results {userProfile?.firstName}</h4>
       {offices.map((office) => {
         const official = officials[office.officialIndices[0]];
         const address = official?.address && official?.address[0];
